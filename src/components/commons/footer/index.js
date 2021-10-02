@@ -32,7 +32,7 @@ const footer = props => {
                     <hr className="has-background-white"/>
                 </p>
                 <br/>
-                <h1 className="subtitle has-text-white">Copyright @ 2021 TheRedApeFamily alrughts reserved</h1>
+                <h1 className="subtitle has-text-white">Copyright © 2021 BigToys All rights reserved</h1>
             </div>
         </footer>
     );

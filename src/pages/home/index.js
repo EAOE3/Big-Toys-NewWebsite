@@ -29,7 +29,7 @@ const HomePage = props => {
             let y = 0;
             switch (navbarReducer.section) {
                 case "HOME":
-                    y = homeSection.current.scrollIntoView()
+                    window.scrollTo(0, 0);
                     break;
 
                 case "FAQ":
