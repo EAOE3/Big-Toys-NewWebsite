@@ -58,7 +58,7 @@ const HomePage = props => {
 
     return(
         <div className="home">
-            <section className="hero is-dark is-large" ref={homeSection}>
+            <section className="hero is-dark is-large" ref={homeSection} >
                 <div className="hero-body bg-gradient">
                     <div className="container has-text-centered">
 
@@ -99,8 +99,10 @@ const HomePage = props => {
                             </figure>
                         </div>
                     </div>
-
+                    <br/>
                     <button className="button is-cyellow has-text-black is-size-5 is-rounded"><strong>MINT</strong></button>
+                    <br/>
+                    <br/>
                     <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                         <div style={{width: '230px'}}>
                             <div className="has-background-dark is-size-7 has-text-white">
@@ -108,6 +110,7 @@ const HomePage = props => {
                             </div>
                         </div>
                     </div>
+                    <br/>
                     <h1 className="title has-text-white is-5">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
                 </div>
             </section>
@@ -115,6 +118,7 @@ const HomePage = props => {
             <section className="py-6 has-background-dark">
                 <div className="container has-text-centered">
                     <h1 className="title has-text-white is-size-3">WHAT IS BIG TOYS?</h1>
+                    <br/>
                     <div className="has-background-dark is-size-5 has-text-white">
                         BIG TOYS IS A PROJECT THAT BRINGS YOU THE MOST <br/>
                         INCREDIBLE VEHICULES A HUMAN MIND CAN EVER IMAGINE.
@@ -133,10 +137,11 @@ const HomePage = props => {
                 </div>
             </section>
 
-            <section className="py-6 has-background-black">
+            <section className="py-6 has-background-black" ref={roadMapSection}>
                 <div className="container has-text-centered">
 
                     <h1 className="title has-text-white is-size-3">ROADMAP AND TIMELINE</h1>
+                    <br/>
 
                     <ul>
                         {
@@ -153,10 +158,11 @@ const HomePage = props => {
                 </div>
             </section>
 
-            <section className="py-6 has-background-dark">
+            <section className="py-6 has-background-dark" ref={teamSection}>
                 <div className="container has-text-centered">
 
-                <h1 className="subtitle has-text-white">TRAF TEAM - Our Team if from all over the world!</h1>
+                <h1 className="title has-text-white is-size-3">MEET THE TEAM</h1>
+                <br/>
 
                 <div className="columns px-3 is-variable is-8">
                     {
@@ -186,10 +192,11 @@ const HomePage = props => {
             </section>
 
 
-            <section className="py-6 has-background-black">
+            <section className="py-6 has-background-black" ref={faqSection}>
                 <div className="container has-text-centered">
 
                     <h1 className="title has-text-white is-size-3">FAQ</h1>
+                    <br/>
 
                     <ul>
                         {
@@ -210,6 +217,7 @@ const HomePage = props => {
                 <div className="container has-text-centered">
 
                     <h1 className="title has-text-white is-size-3">Team</h1>
+                    <br/>
 
                     <ul>
                         {

@@ -21,6 +21,13 @@ const footer = props => {
                             <i class="fab fa-discord"></i>
                         </span>
                     </a>
+                    &nbsp;&nbsp;
+                    <a  href="https://discord.gg/76n76gXSTg" target="_blank">
+                        <span className="icon has-text-white is-size-4">
+                            <i class="fab fa-telegram-plane"></i>
+                        </span>
+                    </a>
+
 
                     <hr className="has-background-white"/>
                 </p>
