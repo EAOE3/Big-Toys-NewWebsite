@@ -1,0 +1,15 @@
+.navbar-start{
+    .navbar-item{
+        &:hover{
+            background: #FFC200 !important;
+            color: black !important;
+        }
+    }
+}
+
+.navbar-menu{
+
+    @media (max-width: 769px){
+        background: black !important;
+    }
+}

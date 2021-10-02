@@ -1,0 +1,17 @@
+@import './vars';
+@import './colorHelpers';
+@import '~bulma';
+
+html, body, #root{
+    width: 100%;
+    height: 100%;
+}
+
+@fontface{
+    font-family: audiowide;
+    src: url('../media/fonts/audiowide.ttf');
+}
+
+*:not(i){
+    font-family: audiowide !important;
+}
