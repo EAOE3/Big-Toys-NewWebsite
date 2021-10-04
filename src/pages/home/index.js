@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
 
 import roadmapData from './roadmap-data';
-import teamData from './team-data';
-import faqData from './faq-data';
+import teamData from '../team-data';
 import {
     logo_white,
     bat
@@ -111,7 +110,10 @@ const HomePage = props => {
                         </div>
                     </div>
                     <br/>
-                    <h1 className="title has-text-white is-5">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
+                    <h1 className="title has-text-white is-5 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
+                    <h1 className="title has-text-white is-5 mb-3">PLEASE USE YOUR COMPUTER ONLY TO MINT FROM THE WEBSITE</h1>
+                    <h1 className="title has-text-white is-5 mb-3">SUPPORTED WALLETS: METAMASK</h1>
+
                 </div>
             </section>
 
@@ -171,7 +173,7 @@ const HomePage = props => {
                                 <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                                     <div style={{width: '180px'}}>
                                         <figure className='image is-square'>
-                                            <img className="is-rounded" src={t.imageurl} alt="" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)'}}/>
+                                            <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)'}}/>
                                         </figure>
                                     </div>
                                 </div>
@@ -192,73 +194,7 @@ const HomePage = props => {
             </section>
 
 
-            <section className="py-6 has-background-black" ref={faqSection}>
-                <div className="container has-text-centered">
 
-                    <h1 className="title has-text-white is-size-3">FAQ</h1>
-                    <br/>
-
-                    <ul>
-                        {
-                            faqData.map( (faq, i) =>
-                                <li className=" mb-5" key={i}>
-                                    <h1 className="title has-text-white is-size-4 mb-1">({i+1})</h1>
-                                    <h1 className="title has-text-white is-size-4 mb-1">{faq.title}</h1>
-                                    <div className=" has-text-white ">{faq.body}</div>
-                                </li>
-                            )
-                        }
-                    </ul>
-
-                </div>
-            </section>
-
-            <section className="py-6 has-background-black">
-                <div className="container has-text-centered">
-
-                    <h1 className="title has-text-white is-size-3">Team</h1>
-                    <br/>
-
-                    <ul>
-                        {
-                            teamData.map( (t, i) => {
-
-                                if(i == 4) return null;
-
-                                return(
-                                    <li className=" mb-6" key={i}>
-
-                                        <div className="columns is-vcentered">
-                                            <div className="column is-3" style={{borderRight: '2px solid #585858'}}>
-                                                <div className="has-text-centered mb-5" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                                                    <div style={{width: '180px'}}>
-                                                        <figure className='image is-square'>
-                                                            <img className="is-rounded" src={t.imageurl} alt="" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)'}}/>
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                                <h1 className="subtitle has-text-white is-5"><ReactHtml html={t.link}/></h1>
-                                            </div>
-                                            <div className="column has-text-left pl-6">
-                                                <div className="" style={{height:"100px"}}>
-                                                    <h1 className="title has-text-white is-5">{t.name}</h1>
-                                                    <h1 className="subtitle has-text-white is-6">{t.charge}</h1>
-                                                </div>
-                                                <p className="has-text-white">
-                                                    {
-                                                        t.info
-                                                    }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                );
-                            })
-                        }
-                    </ul>
-
-                </div>
-            </section>
 
 
 

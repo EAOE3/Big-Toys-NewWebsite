@@ -11,19 +11,44 @@ const data = [
             "<small class='is-size-7'>ONLY BIG TOY NFT HOLDERS WILL HAVE ACCESS TO THE LIST OF GIVEAWAYS</div>"
     }, {
         title: "GIVEAWAYS",
-        body: "<div class='has-text-white'>10 <span class='has-text-cyellow'>PS5</span> WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-19</span></br>" +
-            "<div class='has-text-white'>10 <span class='has-text-cyellow'>iPHONE 12 PRO MAX</span> WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-20</span></br>" +
-            "1 <span class='has-text-cyellow'> MUTANT APE YACHT CLUB</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-21</span></br>" +
-            "1 <span class='has-text-cyellow'> BORED APE KENNEL CLUB</span> DOG NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-22</span></br>" +
-            "1 <span class='has-text-cyellow'> 0N1 FORCE</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-23</span></br>" +
-            "1 <span class='has-text-cyellow'>MEEBIT </span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-24</span></br>" +
-            "1 <span class='has-text-cyellow'> LAZY LION</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-25</span></br>" +
-            "1 <span class='has-text-cyellow'> PUDGY PENGUIN</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-26</span></br>" +
-            "1 <span class='has-text-cyellow'> WORLD OF WOMEN</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-27</span></br>" +
-            "1 <span class='has-text-cyellow'> GUTTER CAT GANG</span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-28</span></br>" +
-            "1 <span class='has-text-cyellow'> SUPDUCK </span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-29</span></br>" +
-            "1 <span class='has-text-cyellow'> SNEAKY VAMPIRE SYNDICATE </span> NFT WILL BE GIVEN AWAY ON <span class='has-text-cyellow'>OCT-30</span></br>" +
-            "<span class='has-text-cpurple'>THE JUSTICE MOBILE WILL BE GIVEN AWAY ON OCT-31</span>"
+        body:
+
+            "<div class='has-text-white'>" +
+
+                "<span class='has-text-warning'>10% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> MUTANT APE YACHT CLUB</span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>20% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> BORED APE KENNEL CLUB</span> DOG NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>30% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> 0N1 FORCE</span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>40% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> PUDGY PENGUIN</span> NFT GIVEAWAY</br></br>" +
+
+
+                "<span class='has-text-warning'>50% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> LAZY LION</span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>60% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> WORLD OF WOMEN</span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>70% OF SALES UNLOCKS: </span></br>" +
+                "10 <span class='has-text-cyellow'>PS5 </span> GIVEAWAY</br></br>" +
+                "1 <span class='has-text-cyellow'>MEEBIT </span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>80% OF SALES UNLOCKS: </span></br>" +
+                "10 <span class='has-text-cyellow'>IPHONE 12 PROMAX </span> GIVEAWAY</br>" +
+                "1 <span class='has-text-cyellow'> GUTTER CAT GANG</span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>90% OF SALES UNLOCKS: </span></br>" +
+                "1 <span class='has-text-cyellow'> SUPDUCK </span> NFT GIVEAWAY</br>" +
+                "1 <span class='has-text-cyellow'> SNEAKY VAMPIRE SYNDICATE </span> NFT GIVEAWAY</br></br>" +
+
+                "<span class='has-text-warning'>100% OF SALES UNLOCKS: </span></br>" +
+                "<span class='has-text-cpurple'>THE JUSTICE MOBILE GIVEAWAY</span>" +
+            "</div>"
 
     }
 ];
