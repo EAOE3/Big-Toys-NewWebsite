@@ -3,7 +3,7 @@ import ReactHtml from 'raw-html-react';
 const Faq = props => {
     return(
         <div>
-            <section className="py-6 has-background-black">
+            <section className="py-6 has-background-black px-3">
                 <div className="container has-text-centered">
 
                     <h1 className="title has-text-white is-size-3">FAQ</h1>

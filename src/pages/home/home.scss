@@ -25,10 +25,10 @@ input{
     height: 100%;
     top: 0;
     left: 0;
-
     figure{
         //transform: translate(0, -200px);
     }
+    overflow: hidden;
 }
 
 .invisible-panel {
