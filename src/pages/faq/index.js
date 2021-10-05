@@ -1,5 +1,5 @@
 import faqData from './faq-data';
-
+import ReactHtml from 'raw-html-react';
 const Faq = props => {
     return(
         <div>
@@ -14,8 +14,8 @@ const Faq = props => {
                             faqData.map( (faq, i) =>
                                 <li className=" mb-5" key={i}>
                                     <h1 className="title has-text-white is-size-4 mb-1">({i+1})</h1>
-                                    <h1 className="title has-text-white is-size-4 mb-1">{faq.title}</h1>
-                                    <div className=" has-text-white ">{faq.body}</div>
+                                    <h1 className="title has-text-white is-size-4 mb-3">{faq.title}</h1>
+                                    <div className=" has-text-white is-size-5"><ReactHtml html={faq.body}/></div>
                                 </li>
                             )
                         }
