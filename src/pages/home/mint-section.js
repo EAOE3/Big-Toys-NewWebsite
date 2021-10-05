@@ -63,8 +63,8 @@ const Mint = props => {
 
             <div className="columns">
                 <div className="column is-half is-offset-one-quarter">
-                    <figure class="image is-16by9">
-                        <iframe class="has-ratio" width="640" height="360" src="https://drive.google.com/uc?export=view&id=1geg0cXkZiKtyq07I8czH6VOTgJVJvHSE" frameborder="0" allowfullscreen autoplay></iframe>
+                    <figure className="image is-16by9">
+                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/mKnynwKZoCY?autoplay=1&mute=0&enablejsapi=1&loop=0&controls=0&playlist=mKnynwKZoCY&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
                     </figure>
                 </div>
             </div>
@@ -93,19 +93,26 @@ const Mint = props => {
 
             <br/>
             <br/>
-            <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                <div style={{width: '300px'}}>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input has-background-dark has-text-white has-text-centered" type="text" placeholder="ENTER THE NUMBER TO MINT"/>
+            {
+                /*
+
+                <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
+                    <div style={{width: '300px'}}>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input has-background-dark has-text-white has-text-centered" type="text" placeholder="ENTER THE NUMBER TO MINT"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                */
+            }
+
             <br/>
-            <h1 className="title has-text-white is-5 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
-            <h1 className="title has-text-white is-5 mb-3">PLEASE USE YOUR COMPUTER ONLY TO MINT FROM THE WEBSITE</h1>
-            <h1 className="title has-text-white is-5 mb-3">SUPPORTED WALLET: METAMASK</h1>
+            <h1 className="title has-text-white is-6 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
+            <h1 className="title has-text-white is-6 mb-3">PLEASE USE YOUR COMPUTER ONLY TO MINT FROM THE WEBSITE</h1>
+            <h1 className="title has-text-white is-6 mb-3">SUPPORTED WALLET: METAMASK</h1>
 
         </div>
     );

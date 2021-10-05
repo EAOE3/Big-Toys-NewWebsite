@@ -1,4 +1,5 @@
 import logo_white_png from  'media/logo_white.png';
+import logo_white_500_png from 'media/logowhite500.png';
 import bat_png from  'media/bat.png';
 
 import member1Png from 'media/member1.png';
@@ -9,6 +10,7 @@ import member5Png from 'media/member5.png';
 
 
 export const logo_white = logo_white_png;
+export const logo_white_500 = logo_white_500_png;
 export const bat = bat_png;
 
 //team members

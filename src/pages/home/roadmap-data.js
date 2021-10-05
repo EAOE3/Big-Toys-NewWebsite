@@ -1,19 +1,18 @@
 const data = [
     {
         title: "MINT PASSES",
-        body: "<div class='has-text-white'>1000 MINT PASSES WILL BE GIVEN AWAY BETWEEN <span class='has-text-cyellow'>OCT-8 & OCT-16</span></br>" +
+        body: "<div class='has-text-white is-size-5'>1000 MINT PASSES WILL BE GIVEN AWAY BETWEEN <span class='has-text-cyellow'>OCT-8 & OCT-16</span></br>" +
             "9000* MINT PASSES WILL BE AVAILABLE TO MINT BETWWEN <span class='has-text-cyellow'>OCT-10 & OCT-16</span></br>" +
-            "<small class='is-size-7'>*BATCHES OF 1500 MINT PASSES WILL BE RELEASED EVERY DAY BETWEEN <span class='has-text-cyellow'>OCT-10 & OCT-16<span><small></div>"
+            "<small class='is-size-6'>*BATCHES OF 1500 MINT PASSES WILL BE RELEASED EVERY DAY BETWEEN <span class='has-text-cyellow'>OCT-10 & OCT-16<span><small></div>"
     }, {
         title: "MINT PASSES",
-        body: "<div class='has-text-white'>MINT PASS HOLDERS WILL BE ABLE TO MINT THEIR BIG TOYS NFTs </br>" +
-            "ON <span class='has-text-cyellow'>OCT-17</span></br>" +
-            "<small class='is-size-7'>ONLY BIG TOY NFT HOLDERS WILL HAVE ACCESS TO THE LIST OF GIVEAWAYS</div>"
+        body: "<div class='has-text-white is-size-5'>MINT PASS HOLDERS WILL BE ABLE TO MINT THEIR BIG TOYS NFTs ON <span class='has-text-cyellow'>OCT-17</span> </br>" +
+            "<small class='is-size-6'>ONLY BIG TOY NFT HOLDERS WILL HAVE ACCESS TO THE LIST OF GIVEAWAYS</div>"
     }, {
         title: "GIVEAWAYS",
         body:
 
-            "<div class='has-text-white'>" +
+            "<div class='has-text-white is-size-5'>" +
 
                 "<span class='has-text-warning'>10% OF SALES UNLOCKS: </span></br>" +
                 "1 <span class='has-text-cyellow'> MUTANT APE YACHT CLUB</span> NFT GIVEAWAY</br></br>" +

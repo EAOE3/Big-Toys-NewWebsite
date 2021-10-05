@@ -1,6 +1,13 @@
+import {useEffect} from 'react';
 import teamData from '../team-data';
 import ReactHtml from 'raw-html-react';
 const Team = props => {
+
+    useEffect(
+        () => {
+            window.scrollTo(0, 0);
+        }, []
+    );
     return(
         <div>
             <section className="py-6 has-background-black">

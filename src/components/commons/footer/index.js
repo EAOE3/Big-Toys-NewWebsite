@@ -1,6 +1,6 @@
 const footer = props => {
     return(
-        <footer class="footer has-background-black">
+        <footer class="footer has-background-black pb-6">
             <div class="container has-text-centered">
 
                 <p>
@@ -21,13 +21,12 @@ const footer = props => {
                             <i class="fab fa-discord"></i>
                         </span>
                     </a>
-        
+
 
 
                     <hr className="has-background-white"/>
                 </p>
-                <br/>
-                <h1 className="subtitle has-text-white">Copyright © 2021 BigToys All rights reserved</h1>
+                <h1 className="has-text-white is-size-6">Copyright © 2021 BigToys All rights reserved</h1>
             </div>
         </footer>
     );

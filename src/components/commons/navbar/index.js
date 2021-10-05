@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {
-    logo_white
+    logo_white_500
 } from 'images';
 
 import ConnectButton from 'components/connect-btn';
@@ -53,7 +53,7 @@ const Navbar = props => {
             <div className="container">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="">
-                      <img src={logo_white} alt="" width="64px" height="60px"/>
+                      <img src={logo_white_500} alt="" width="64px" height="64px"/>
                     </a>
 
                     <a  id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" onClick={onBurgerClicked}>

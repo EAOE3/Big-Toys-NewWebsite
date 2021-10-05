@@ -11,9 +11,6 @@ import {
     logo_white
  } from 'images';
 
- import bannerVideo from 'media/banner_video.mov';
-
-
 import ReactHtml from 'raw-html-react';
 
 import './home.scss';
@@ -64,10 +61,17 @@ const HomePage = props => {
 
     return(
         <div className="home">
-            <section className="hero is-dark is-large" ref={homeSection} style={{position: 'relative'}}>
+            <section className="hero is-dark is-medium" ref={homeSection} style={{position: 'relative'}}>
                 <div className="background-video">
-                    <figure className="image is-16by9">
-                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=0&mute=1&enablejsapi=1&loop=1&controls=0&playlist=_0bbi8UAfks&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+
+
+                    {/*
+                        small screens
+                            <iframe class="has-ratio" width="100%" height="100%"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=1&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                        */
+                    }
+                    <figure className="image is-16by9" style={{display: 'grid', placeItems: 'center'}}>
+                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=1&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
                     </figure>
                 </div>
                 <div className="invisible-panel">
@@ -106,9 +110,9 @@ const HomePage = props => {
             <section className="py-6" style={{position: 'relative', background: 'rgb(0,0,0)'}}>
                 <div className="container" style={{display: 'grid', placeItems: 'center'}}>
 
-                    <div style={{width: '800px'}}>
+                    <div style={{width: '80%'}}> {/* change to responsive */}
                         <figure className="image is-16by9">
-                            <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/JLbGsN7vCt8?autoplay=0&mute=0&enablejsapi=1&loop=1&controls=0&playlist=JLbGsN7vCt8&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/JLbGsN7vCt8?autoplay=0&mute=0&enablejsapi=1&loop=1&controls=1&playlist=JLbGsN7vCt8&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
                         </figure>
                     </div>
 
