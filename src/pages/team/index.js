@@ -4,7 +4,7 @@ const Team = props => {
     return(
         <div>
             <section className="py-6 has-background-black">
-                <div className="container has-text-centered">
+                <div className="container has-text-centered px-3">
 
                     <h1 className="title has-text-white is-size-3">Team</h1>
                     <br/>

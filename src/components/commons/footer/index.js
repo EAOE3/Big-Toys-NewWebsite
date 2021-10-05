@@ -4,29 +4,24 @@ const footer = props => {
             <div class="container has-text-centered">
 
                 <p>
-                    <a href="https://twitter.com/TheRedApeFamily" target="_blank">
+                    <a href="https://twitter.com/bigtoysnft?s=21" target="_blank">
                         <span className="icon has-text-white is-size-4">
                             <i class="fab fa-twitter"></i>
                         </span>
                     </a>
                     &nbsp;&nbsp;
-                    <a href="https://www.youtube.com/channel/UCLCsACZQEeKOzjfbK2kIo9A" target="_blank">
+                    <a href="https://www.instagram.com/bigtoysnft/" target="_blank">
                         <span className="icon has-text-white is-size-4">
-                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-instagram"></i>
                         </span>
                     </a>
                     &nbsp;&nbsp;
-                    <a  href="https://discord.gg/76n76gXSTg" target="_blank">
+                    <a  href="https://discord.gg/42QAfwhu" target="_blank">
                         <span className="icon has-text-white is-size-4">
                             <i class="fab fa-discord"></i>
                         </span>
                     </a>
-                    &nbsp;&nbsp;
-                    <a  href="https://discord.gg/76n76gXSTg" target="_blank">
-                        <span className="icon has-text-white is-size-4">
-                            <i class="fab fa-telegram-plane"></i>
-                        </span>
-                    </a>
+        
 
 
                     <hr className="has-background-white"/>

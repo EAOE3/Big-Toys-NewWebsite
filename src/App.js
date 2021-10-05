@@ -14,6 +14,9 @@ import Team from 'pages/team';
 
 import 'scss/main.scss';
 
+import {initWeb3} from './web3';
+initWeb3();
+
 function App() {
     return (
         <Router>

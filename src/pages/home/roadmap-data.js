@@ -1,13 +1,13 @@
 const data = [
     {
         title: "MINT PASSES",
-        body: "<div class='has-text-white'>1000 MINT PASSES WILL BE GIVEN AWAY BETWEEN <span class='has-text-cyellow'>OCT-3 & OCT-14</span></br>" +
-            "9000* MINT PASSES WILL BE AVAILABLE TO MINT BETWWEN <span class='has-text-cyellow'>OCT-8 & OCT-13</span></br>" +
-            "<small class='is-size-7'>*BATCHES OF 1500 MINT PASSES WILL BE RELEASED EVERY DAY BETWEEN <span class='has-text-cyellow'>OCT-8 & OCT-13<span><small></div>"
+        body: "<div class='has-text-white'>1000 MINT PASSES WILL BE GIVEN AWAY BETWEEN <span class='has-text-cyellow'>OCT-8 & OCT-16</span></br>" +
+            "9000* MINT PASSES WILL BE AVAILABLE TO MINT BETWWEN <span class='has-text-cyellow'>OCT-10 & OCT-16</span></br>" +
+            "<small class='is-size-7'>*BATCHES OF 1500 MINT PASSES WILL BE RELEASED EVERY DAY BETWEEN <span class='has-text-cyellow'>OCT-10 & OCT-16<span><small></div>"
     }, {
         title: "MINT PASSES",
         body: "<div class='has-text-white'>MINT PASS HOLDERS WILL BE ABLE TO MINT THEIR BIG TOYS NFTs </br>" +
-            "BETWEEN <span class='has-text-cyellow'>OCT-15 & OCT-18</span></br>" +
+            "ON <span class='has-text-cyellow'>OCT-17</span></br>" +
             "<small class='is-size-7'>ONLY BIG TOY NFT HOLDERS WILL HAVE ACCESS TO THE LIST OF GIVEAWAYS</div>"
     }, {
         title: "GIVEAWAYS",
@@ -35,7 +35,7 @@ const data = [
                 "1 <span class='has-text-cyellow'> WORLD OF WOMEN</span> NFT GIVEAWAY</br></br>" +
 
                 "<span class='has-text-warning'>70% OF SALES UNLOCKS: </span></br>" +
-                "10 <span class='has-text-cyellow'>PS5 </span> GIVEAWAY</br></br>" +
+                "10 <span class='has-text-cyellow'>PS5 </span> GIVEAWAY</br>" +
                 "1 <span class='has-text-cyellow'>MEEBIT </span> NFT GIVEAWAY</br></br>" +
 
                 "<span class='has-text-warning'>80% OF SALES UNLOCKS: </span></br>" +

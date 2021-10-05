@@ -3,15 +3,20 @@ import {useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
 
+import Mint from './mint-section';
+
 import roadmapData from './roadmap-data';
 import teamData from '../team-data';
 import {
-    logo_white,
-    bat
+    logo_white
  } from 'images';
+
+ import bannerVideo from 'media/banner_video.mov';
 
 
 import ReactHtml from 'raw-html-react';
+
+import './home.scss';
 
 
 const HomePage = props => {
@@ -20,6 +25,8 @@ const HomePage = props => {
     const faqSection = useRef(null);
     const roadMapSection = useRef(null);
     const teamSection = useRef(null);
+
+
 
     const {navbarReducer} = props;
 
@@ -57,9 +64,16 @@ const HomePage = props => {
 
     return(
         <div className="home">
-            <section className="hero is-dark is-large" ref={homeSection} >
+            <section className="hero is-dark is-large" ref={homeSection} style={{position: 'relative'}}>
+                <div className="background-video">
+                    <figure className="image is-16by9">
+                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=0&mute=1&enablejsapi=1&loop=1&controls=0&playlist=_0bbi8UAfks&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                    </figure>
+                </div>
+                <div className="invisible-panel">
+                </div>
                 <div className="hero-body bg-gradient">
-                    <div className="container has-text-centered">
+                    <div className="container has-text-centered px-3">
 
 
                         <div className="has-text-centered mb-5" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
@@ -81,44 +95,32 @@ const HomePage = props => {
                             OUR UTILITY IS OUR COMMUNITY.
                         </h1>
 
-
+                        <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
 
 
                     </div>
                 </div>
             </section>
 
-            <section className="py-6 has-background-black">
-                <div className="container has-text-centered">
 
-                    <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                        <div style={{width: '120px'}}>
-                            <figure className="image is-square" >
-                                <img src={bat} alt=""/>
-                            </figure>
-                        </div>
+            <section className="py-6" style={{position: 'relative', background: 'rgb(0,0,0)'}}>
+                <div className="container" style={{display: 'grid', placeItems: 'center'}}>
+
+                    <div style={{width: '800px'}}>
+                        <figure className="image is-16by9">
+                            <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/JLbGsN7vCt8?autoplay=0&mute=0&enablejsapi=1&loop=1&controls=0&playlist=JLbGsN7vCt8&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                        </figure>
                     </div>
-                    <br/>
-                    <button className="button is-cyellow has-text-black is-size-5 is-rounded"><strong>MINT</strong></button>
-                    <br/>
-                    <br/>
-                    <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                        <div style={{width: '230px'}}>
-                            <div className="has-background-dark is-size-7 has-text-white">
-                                ENTER THE AMOUNT OF MINT PASSES YOU WANT TO MINT
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <h1 className="title has-text-white is-5 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
-                    <h1 className="title has-text-white is-5 mb-3">PLEASE USE YOUR COMPUTER ONLY TO MINT FROM THE WEBSITE</h1>
-                    <h1 className="title has-text-white is-5 mb-3">SUPPORTED WALLETS: METAMASK</h1>
 
                 </div>
+            </section>
+
+            <section className="py-6 has-background-black" style={{position: 'relative', minHeight: '800px'}}>
+                <Mint/>
             </section>
 
             <section className="py-6 has-background-dark">
-                <div className="container has-text-centered">
+                <div className="container has-text-centered px-3">
                     <h1 className="title has-text-white is-size-3">WHAT IS BIG TOYS?</h1>
                     <br/>
                     <div className="has-background-dark is-size-5 has-text-white">
@@ -134,13 +136,13 @@ const HomePage = props => {
                         10000 GENERATIVE JUSTICE MOBILE CARS WITH OVER 170 HAND-DRAWN <br/> FEATURES WILL BE AVAILABLE TO MINT… AND ONE LUCKY WINNER WILL TAKE <br/> THE IRL JUSTICE MOBILE HOME!
                     </div>
                     <br/>
-                    <button className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOINT DISCORD</strong></button>
+                    <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
 
                 </div>
             </section>
 
             <section className="py-6 has-background-black" ref={roadMapSection}>
-                <div className="container has-text-centered">
+                <div className="container has-text-centered px-3">
 
                     <h1 className="title has-text-white is-size-3">ROADMAP AND TIMELINE</h1>
                     <br/>
@@ -148,7 +150,7 @@ const HomePage = props => {
                     <ul>
                         {
                             roadmapData.map( (content, i) =>
-                                <li className=" mb-5" key={i}>
+                                <li className=" mb-6" key={i}>
                                     <h1 className="title has-text-white is-size-4 mb-1">({i+1})</h1>
                                     <h1 className="title has-text-white is-size-4">{content.title}</h1>
                                     <ReactHtml html={content.body}/>
@@ -161,12 +163,12 @@ const HomePage = props => {
             </section>
 
             <section className="py-6 has-background-dark" ref={teamSection}>
-                <div className="container has-text-centered">
+                <div className="container has-text-centered px-3">
 
                 <h1 className="title has-text-white is-size-3">MEET THE TEAM</h1>
                 <br/>
 
-                <div className="columns px-3 is-variable is-8">
+                <div className="columns px-3">
                     {
                         teamData.map( (t, i) =>
                             <div className="column has-text-centered" key={i}>

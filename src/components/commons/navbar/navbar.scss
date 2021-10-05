@@ -4,6 +4,10 @@
             background: #FFC200 !important;
             color: black !important;
         }
+
+        &:focus{
+            background: none;
+        }
     }
 }
 

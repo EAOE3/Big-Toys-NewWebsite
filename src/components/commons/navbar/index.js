@@ -5,10 +5,14 @@ import {
 
 import ConnectButton from 'components/connect-btn';
 
+import {Link} from 'react-router-dom';
+
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
 
 import './navbar.scss';
+
+
 
 const Navbar = props => {
 
@@ -42,7 +46,7 @@ const Navbar = props => {
         const navbarBurger = document.getElementById("navbar-burger");
         navbarBurger.classList.toggle('is-active');
     }
-    console.log(window.scrollY);
+
 
     return(
         <nav class={`navbar is-fixed-top ${window.scrollY > 0 ? 'has-background-dark' : 'has-background-black'}`} role="navigation" aria-label="main navigation">
@@ -53,59 +57,52 @@ const Navbar = props => {
                     </a>
 
                     <a  id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" onClick={onBurgerClicked}>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
+                      <span  className="has-text-white" aria-hidden="true"></span>
+                      <span  className="has-text-white" aria-hidden="true"></span>
+                      <span  className="has-text-white" aria-hidden="true"></span>
                     </a>
                 </div>
 
                 <div id="navbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("HOME"); onBurgerIClicked(e)}}>
+                    <Link className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("HOME"); onBurgerIClicked(e)}} to="/home">
                         Home
-                    </a>
+                    </Link>
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("FAQ"); onBurgerIClicked(e)}}>
+                    {/* }<Link className="has-text-white navbar-item has-text-centered-mobile" to="/faq">
                         FAQ
-                    </a>
+                    </Link> */}
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}}>
+                    <Link className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}} to="/home">
                         Roadmap
-                    </a>
+                    </Link>
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={ e => {props.set_section("TEAM"); onBurgerIClicked(e)}}>
+                    <Link className="has-text-white navbar-item has-text-centered-mobile" to="/team">
                         Team
-                    </a>
+                    </Link>
 
 
                 </div>
 
                 <div class="navbar-end">
                     <div class="navbar-item has-text-centered-mobile">
-                        <a class="is-size-4 " href="https://twitter.com/TheRedApeFamily" target="_blank" onClick={onBurgerIClicked}>
+                        <a class="is-size-4 " href="https://twitter.com/bigtoysnft?s=21" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white" >
                                 <i class="fab fa-twitter"></i>
                             </span>
                         </a>
                     </div>
                     <div class="navbar-item has-text-centered-mobile">
-                        <a class="is-size-4 " href="https://www.youtube.com/channel/UCLCsACZQEeKOzjfbK2kIo9A" target="_blank" onClick={onBurgerIClicked}>
+                        <a class="is-size-4 " href="https://www.instagram.com/bigtoysnft/" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white">
                                 <i class="fab fa-instagram"></i>
                             </span>
                         </a>
                     </div>
                     <div class="navbar-item has-text-centered-mobile">
-                        <a class="is-size-4 " href="https://discord.gg/76n76gXSTg" target="_blank" onClick={onBurgerIClicked}>
+                        <a class="is-size-4 " href="https://discord.gg/42QAfwhu" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white">
                                 <i class="fab fa-discord"></i>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="navbar-item has-text-centered-mobile">
-                        <a class="is-size-4 " href="https://discord.gg/76n76gXSTg" target="_blank" onClick={onBurgerIClicked}>
-                            <span className="icon has-text-white">
-                                <i class="fab fa-telegram-plane"></i>
                             </span>
                         </a>
                     </div>
