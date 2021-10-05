@@ -1,20 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 @import './vars';
 @import './colorHelpers';
 @import './imageHelpers';
 @import '~bulma';
+
 
 html, body, #root{
     width: 100%;
     height: 100%;
 }
 
-@fontface{
-    font-family: audiowide;
-    src: url('../media/fonts/audiowide.ttf');
-}
 
 *:not(i){
-    font-family: audiowide !important;
+    font-family: 'Audiowide', cursive;
 }
 
 .is-medium{

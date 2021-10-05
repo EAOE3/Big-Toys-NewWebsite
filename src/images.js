@@ -8,6 +8,8 @@ import member3Png from 'media/member3.png';
 import member4Png from 'media/member4.png';
 import member5Png from 'media/member5.png';
 
+import mint_pass_gif from 'media/mintpass.gif';
+
 
 export const logo_white = logo_white_png;
 export const logo_white_500 = logo_white_500_png;
@@ -19,3 +21,5 @@ export const member2 = member2Png;
 export const member3 = member3Png;
 export const member4 = member4Png;
 export const member5 = member5Png;
+
+export const mintpass = mint_pass_gif;

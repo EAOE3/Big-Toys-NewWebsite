@@ -1,19 +1,26 @@
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
+
 
 import Mint from './mint-section';
 
 import roadmapData from './roadmap-data';
 import teamData from '../team-data';
 import {
-    logo_white
+    logo_white,
+    mintpass
  } from 'images';
 
 import ReactHtml from 'raw-html-react';
 
 import './home.scss';
+
+
+
+
+
 
 
 const HomePage = props => {
@@ -22,6 +29,37 @@ const HomePage = props => {
     const faqSection = useRef(null);
     const roadMapSection = useRef(null);
     const teamSection = useRef(null);
+
+    useEffect(
+        () => {
+            const target_date = Date.parse('Oct 10 2021 14:00:00 GMT-0500');
+            setInterval(() => {
+                const current_date = Date.parse( new Date() );
+                var distance = target_date - current_date;
+
+                // Time calculations for days, hours, minutes and seconds
+              const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              setTime({
+                  days,
+                  hours,
+                  minutes,
+                  seconds
+              });
+
+            }, 1000);
+        }, []
+    );
+
+    const [time, setTime] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
 
 
@@ -68,11 +106,11 @@ const HomePage = props => {
                     {/*
                         small screens
                             <iframe class="has-ratio" width="100%" height="100%"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=1&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                        */
-                    }
+
+
                     <figure className="image is-16by9" style={{display: 'grid', placeItems: 'center'}}>
-                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=1&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                    </figure>
+                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                    </figure>        */}
                 </div>
                 <div className="invisible-panel">
                 </div>
@@ -101,47 +139,55 @@ const HomePage = props => {
 
                         <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
 
+                        <br/><br/>
+                        <h1 className="subtitle has-text-white mt-3">
+                            MINT THIS PASS FOR 0.02 ETH FOR A CHANCE TO WIN THIS PRICELESS CAR
+                        </h1>
+
+                        <h1 className="subtitle has-text-white mt-3">
+                            {time.days} DAYS {time.hours} HOURS {time.minutes} MINUTES {time.seconds} SECONDS
+                        </h1>
 
                     </div>
                 </div>
             </section>
 
 
-            <section className="py-6" style={{position: 'relative', background: 'rgb(0,0,0)'}}>
-                <div className="container" style={{display: 'grid', placeItems: 'center'}}>
 
-                    <div style={{width: '80%'}}> {/* change to responsive */}
-                        <figure className="image is-16by9">
-                            <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/JLbGsN7vCt8?autoplay=0&mute=0&enablejsapi=1&loop=1&controls=1&playlist=JLbGsN7vCt8&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                        </figure>
-                    </div>
 
-                </div>
-            </section>
-
-            <section className="py-6 has-background-black" style={{position: 'relative', minHeight: '800px'}}>
-                <Mint/>
-            </section>
+        {/*    <section className="py-6 has-background-black" style={{position: 'relative', minHeight: '800px'}}>
+                }<Mint/>
+            </section>*/}
 
             <section className="py-6 has-background-dark">
                 <div className="container has-text-centered px-3">
-                    <h1 className="title has-text-white is-size-3">WHAT IS BIG TOYS?</h1>
-                    <br/>
-                    <div className="has-background-dark is-size-5 has-text-white">
-                        BIG TOYS IS A PROJECT THAT BRINGS YOU THE MOST <br/>
-                        INCREDIBLE VEHICULES A HUMAN MIND CAN EVER IMAGINE.
+                    <div className="columns">
+                        <div className="column">
+                            <h1 className="title has-text-white is-size-3">WHAT IS BIG TOYS?</h1>
+                            <br/>
+                            <div className="has-background-dark is-size-5 has-text-white">
+                                BIG TOYS IS A PROJECT THAT BRINGS YOU THE MOST <br/>
+                                INCREDIBLE VEHICLES A HUMAN MIND CAN EVER IMAGINE.
+                            </div>
+                            <br/>
+                            <div className="has-background-dark is-size-5 has-text-white">
+                                IN PHASE 1.0, BIG TOYS IS BRINGING THE FAMOUS JUSTICE MOBILE TO LIFE AND GIVING IT AWAY TO A LUCKY WINNER!
+                            </div>
+                            <br/>
+                            <div className="has-background-dark is-size-5 has-text-white">
+                                10000 GENERATIVE JUSTICE MOBILE CARS WITH OVER 170 HAND-DRAWN FEATURES WILL BE AVAILABLE TO MINT… AND ONE LUCKY WINNER WILL TAKE THE IN REAL LIFE JUSTICE MOBILE HOME!
+                            </div>
+                        </div>
+                        <div className="column" style={{display: 'grid', placeItems: 'center'}}>
+                            <div style={{width: '350px'}}>
+                                <figure className="image is-squaer" >
+                                    <img src={mintpass} alt="" style={{borderRadius: '10px'}}/>
+                                </figure>
+                            </div>
+                        </div>
                     </div>
-                    <br/>
-                    <div className="has-background-dark is-size-5 has-text-white">
-                        IN PHASE 1.0, BIG TOYS IS BRINGING THE FAMOUS JUSTICE MOBILE TO LIFE!
-                    </div>
-                    <br/>
-                    <div className="has-background-dark is-size-5 has-text-white">
-                        10000 GENERATIVE JUSTICE MOBILE CARS WITH OVER 170 HAND-DRAWN <br/> FEATURES WILL BE AVAILABLE TO MINT… AND ONE LUCKY WINNER WILL TAKE <br/> THE IRL JUSTICE MOBILE HOME!
-                    </div>
-                    <br/>
-                    <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
 
+                    <br/>
                 </div>
             </section>
 

@@ -69,9 +69,9 @@ const Navbar = props => {
                         Home
                     </Link>
 
-                    {/* }<Link className="has-text-white navbar-item has-text-centered-mobile" to="/faq">
+                    <Link className="has-text-white navbar-item has-text-centered-mobile" to="/faq">
                         FAQ
-                    </Link> */}
+                    </Link>
 
                     <Link className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}} to="/home">
                         Roadmap
@@ -79,6 +79,10 @@ const Navbar = props => {
 
                     <Link className="has-text-white navbar-item has-text-centered-mobile" to="/team">
                         Team
+                    </Link>
+
+                    <Link className="has-text-white navbar-item has-text-centered-mobile" to="/media">
+                        Media
                     </Link>
 
 

@@ -16,7 +16,7 @@ const team = [
 
     }, {
         imageurl: member2,
-        name: 'Jonathan Poyser',
+        name: 'Jhonny Sierra',
         charge: 'Chief Operations Officer',
         link: '<a href="https://www.instagram.com/jonnysierra/"><span class="icon is-size-2 has-text-white"><i class="fab fa-instagram"></i></span></a>',
         info: 'Jonathan Poyser is the owner of Sierra Holdings. He lives between New York and Dubai. He has dipped his mind and feet into many realms of life and work and emerged victorious every time. Jonathan is a strategic thinker; every move he makes leads to a goal. Some of the roles include being a management consultant and big tech manager.'

@@ -11,6 +11,7 @@ import Footer from 'components/commons/footer';
 import Home from 'pages/home';
 import Faq from 'pages/faq';
 import Team from 'pages/team';
+import Media from 'pages/media';
 
 import 'scss/main.scss';
 
@@ -36,6 +37,10 @@ function App() {
 
                     <Route exact path="/team">
                         <Team/>
+                    </Route>
+
+                    <Route exact path="/media">
+                        <Media/>
                     </Route>
                 </Switch>
 

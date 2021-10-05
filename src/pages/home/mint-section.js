@@ -3,6 +3,12 @@ import {bat} from 'images';
 
 import {connect} from 'react-redux';
 import {request_connection, request_change_network, check_connected_to_operating_network} from 'redux/actions/walletActions';
+import {start_minting_tx} from 'redux/actions/txActions';
+
+import {mintpass} from 'images';
+
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
 
 const Mint = props => {
 
@@ -39,7 +45,7 @@ const Mint = props => {
                     ...webData,
                     mintsLeft: webData.maxMint - webData.userMints
                 }
-                console.log(webData);
+                // console.log(webData);
             } catch (e) {
                 console.log('ERROR CONSULTING DATA', e);
             }finally{
@@ -58,15 +64,39 @@ const Mint = props => {
         }, []
     );
 
+    const validationSchema = Yup.object().shape({
+        mintQuantity: Yup.number().min(1).max(10).required('required')
+    });
+
+
+    const formik = useFormik({
+        initialValues: {
+            mintQuantity: 1,
+        },
+        validationSchema: validationSchema,
+        onSubmit: async values => {
+            console.log(webData);
+            // alert(JSON.stringify(values, null, 2));
+            // const wallet = props.wallet;
+
+            // const webData = await erc_contract.methods.webData(props.wallet.currentAccount).call();
+
+            await props.start_minting_tx({
+                value: Number(webData.price) * Number(values.mintQuantity),
+                amount: values.mintQuantity
+            });
+        },
+    });
+
     return(
         <div className="container has-text-centered px-3">
 
-            <div className="columns">
-                <div className="column is-half is-offset-one-quarter">
-                    <figure className="image is-16by9">
-                        <iframe class="has-ratio" width="640" height="360"  src="https://www.youtube.com/embed/mKnynwKZoCY?autoplay=1&mute=0&enablejsapi=1&loop=0&controls=0&playlist=mKnynwKZoCY&vq=hd2160&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                    </figure>
-                </div>
+
+            <div className="" style={{width: '100%'}}>
+
+                <figure className="image is-squaer">
+                    <img src={mintpass} alt=""/>
+                </figure>
             </div>
 
 
@@ -78,36 +108,44 @@ const Mint = props => {
                 </div>
             </div>
             <br/>
-            {
-                (target_date - current_date > 0) ?
-                    <button className="button is-cyellow has-text-black is-size-5 is-rounded" disabled><strong>MINT ON OCT 10</strong></button>
-                :
-                    wallet && wallet.isConnected ?
-                        wallet.connectedToOperatingNetwork ?
-                            <button className="button is-cyellow has-text-black is-size-5 is-rounded"><strong>MINT</strong></button>
-                        :
-                            <button className="button is-cyellow has-text-black is-size-5 is-rounded" onClick={e => props.request_change_network(4)}><strong>Change to ETH mainnet</strong></button>
+            <form onSubmit={formik.handleSubmit}>
+                {
+                    (target_date - current_date > 0) ?
+                        <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 10</strong></button>
                     :
-                        <button className="button is-cyellow has-text-black is-size-5 is-rounded" onClick={e => props.request_connection()}><strong>Connect</strong></button>
-            }
+                        wallet && wallet.isConnected ?
+                            wallet.connectedToOperatingNetwork ?
+                                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="submit"><strong>MINT</strong></button>
+                            :
+                                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(4)}><strong>Change to ETH mainnet</strong></button>
+                        :
+                            <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_connection()}><strong>Connect</strong></button>
+                }
 
-            <br/>
-            <br/>
-            {
-                /*
+                <br/>
+                <br/>
+                {
+                    (target_date - current_date > 0) ?
+                        null
+                    :
 
-                <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                    <div style={{width: '300px'}}>
-                        <div class="field">
-                            <div class="control">
-                                <input class="input has-background-dark has-text-white has-text-centered" type="text" placeholder="ENTER THE NUMBER TO MINT"/>
+                    <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
+                        <div style={{width: '300px'}}>
+                            <div class="field">
+                                <div class="control" style={{height: '80px'}}>
+                                    <input class="input has-background-dark has-text-white has-text-centered" type="number" placeholder="ENTER THE NUMBER TO MINT" name="mintQuantity" value={formik.values.mintQuantity} onChange={formik.handleChange}/>
+                                    <div className="help has-text-white">
+                                    {
+                                        formik.errors.mintQuantity
+                                    }
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                */
-            }
+                }
+            </form>
 
             <br/>
             <h1 className="title has-text-white is-6 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
@@ -129,6 +167,7 @@ export default connect(
     {
         request_connection,
         request_change_network,
-        check_connected_to_operating_network
+        check_connected_to_operating_network,
+        start_minting_tx
     }
 )(Mint);
