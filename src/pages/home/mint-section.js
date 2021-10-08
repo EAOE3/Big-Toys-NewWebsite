@@ -14,10 +14,13 @@ const Mint = props => {
 
     const erc_contract = props.web3Reducer.contracts['ERC_CONTRACT'];
 
-    const [webData, setWebData] = useState(null);
+    const [webData, setWebData] = useState({
+        userMints: 0,
+        leftNFT: 0
+    });
 
     const {wallet} = props;
-
+    // console.log(webData);
 
 
     const target_date = Date.parse('Oct 10 2021 14:00:00 GMT-0500');
@@ -43,7 +46,7 @@ const Mint = props => {
                 webData = await erc_contract.methods.webData(props.wallet.currentAccount).call();
                 webData = {
                     ...webData,
-                    mintsLeft: webData.maxMint - webData.userMints
+                    mintsLeft: webData.totalAllowedMintsPerUser - webData.userMints
                 }
                 // console.log(webData);
             } catch (e) {
@@ -53,7 +56,10 @@ const Mint = props => {
             }
         }
         else{
-            setWebData(null);
+            setWebData({
+                userMints: 0,
+                leftNFT: 0
+            });
         }
     }
 
@@ -75,11 +81,6 @@ const Mint = props => {
         },
         validationSchema: validationSchema,
         onSubmit: async values => {
-            console.log(webData);
-            // alert(JSON.stringify(values, null, 2));
-            // const wallet = props.wallet;
-
-            // const webData = await erc_contract.methods.webData(props.wallet.currentAccount).call();
 
             await props.start_minting_tx({
                 value: Number(webData.price) * Number(values.mintQuantity),
@@ -88,16 +89,17 @@ const Mint = props => {
         },
     });
 
+    useEffect(
+        () => {
+            getWebData();
+            formik.setFieldValue("mintQuantity", 1);
+        }, [props.txReducer.MINT_TX.success]
+    );
+
     return(
         <div className="container has-text-centered px-3">
 
 
-            <div className="" style={{width: '100%'}}>
-
-                <figure className="image is-squaer">
-                    <img src={mintpass} alt=""/>
-                </figure>
-            </div>
 
 
             <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
@@ -111,11 +113,22 @@ const Mint = props => {
             <form onSubmit={formik.handleSubmit}>
                 {
                     (target_date - current_date > 0) ?
+                    // false ?
                         <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 10</strong></button>
                     :
                         wallet && wallet.isConnected ?
                             wallet.connectedToOperatingNetwork ?
-                                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="submit"><strong>MINT</strong></button>
+                                <div>
+                                    {
+
+                                    }
+                                    <h1 className="subtitle has-text-white is-6 mb-4">{webData.userMints} NFT's minted</h1>
+
+                                    <h1 className="subtitle has-text-white is-6 mb-4">{webData.mintsLeft} Mints left for this wallet </h1>
+                                    <h1 className="subtitle has-text-white is-7 mb-4">{webData.leftNFT} NFT's left </h1>
+
+                                    <button className={`button is-cyellow has-text-black is-size-5 is-rounded  ${props.txReducer.MINT_TX.loading ? 'is-loading is-warning' : ''}`} type="submit"><strong>MINT</strong></button>
+                                </div>
                             :
                                 <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(4)}><strong>Change to ETH mainnet</strong></button>
                         :
@@ -126,6 +139,7 @@ const Mint = props => {
                 <br/>
                 {
                     (target_date - current_date > 0) ?
+                    // false ?
                         null
                     :
 

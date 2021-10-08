@@ -41,7 +41,7 @@ export const start_minting_tx = txData => {
 
         const erc_contract = web3Reducer.contracts['ERC_CONTRACT'];
         // console.log(erc_contract.methods);
-        const tx = await erc_contract.methods._mint( walletReducer.currentAccount, txData.amount.toString() );
+        const tx = await erc_contract.methods.mint( walletReducer.currentAccount, txData.amount.toString() );
 
 
 
@@ -57,7 +57,7 @@ export const start_minting_tx = txData => {
             await tx.send({
                 from: walletReducer.currentAccount,
                 value: txData.value,
-                gas: 100000,
+                gas: 100000 * txData.amount,
                 maxPriorityFeePerGas: null,
                 maxFeePerGas: null
             });

@@ -35,13 +35,11 @@ const initWeb3 = async () => {
              store.dispatch( set_networkd_id( await web3.eth.getChainId() ) );
         }
 
-        // const chainId = await web3.eth.getChainId();
 
-        const ethId = '4';
-        const bscId = '97';
+
 
         //instance contracts
-        const ercContract = new web3.eth.Contract(ERCABI, '0x946a76B197d8B420D038d3830713545299C2C2D8');
+        const ercContract = new web3.eth.Contract(ERCABI, '0xb2bB14e83302AdD1E78B2A3500aaf4ffb11b4771');
         store.dispatch( add_contract(`ERC_CONTRACT`, ercContract) );
 
 

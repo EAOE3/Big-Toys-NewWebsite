@@ -154,9 +154,9 @@ const HomePage = props => {
 
 
 
-        {/*    <section className="py-6 has-background-black" style={{position: 'relative', minHeight: '800px'}}>
-                }<Mint/>
-            </section>*/}
+            <section className="py-6 has-background-black" style={{position: 'relative'}}>
+                <Mint/>
+            </section>
 
             <section className="py-6 has-background-dark">
                 <div className="container has-text-centered px-3">
