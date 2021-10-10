@@ -23,7 +23,7 @@ const Mint = props => {
     // console.log(webData);
 
 
-    const target_date = Date.parse('Oct 10 2021 14:00:00 GMT-0500');
+    const target_date = Date.parse('Oct 19 2021 14:00:00 GMT-0500');
     const current_date = Date.parse( new Date() );
 
 
@@ -114,7 +114,7 @@ const Mint = props => {
                 {
                     (target_date - current_date > 0) ?
                     // false ?
-                        <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 10</strong></button>
+                        <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 19</strong></button>
                     :
                         wallet && wallet.isConnected ?
                             wallet.connectedToOperatingNetwork ?
