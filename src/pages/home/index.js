@@ -13,6 +13,8 @@ import {
     mintpass
  } from 'images';
 
+ import backgroundVideo from 'media/bannervideo.mp4';
+
 import ReactHtml from 'raw-html-react';
 
 import './home.scss';
@@ -95,24 +97,15 @@ const HomePage = props => {
 
     return(
         <div className="home">
-            <section className="hero is-dark is-medium" ref={homeSection} style={{position: 'relative'}}>
-                <div className="background-video ias-flex">
-
-
-
-
-                    <figure className="image is-16by9">
-                        <iframe class="has-ratio" width="100%" height="100%"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                    </figure>
-                    {/*
-                        small screens
-                            <iframe class="has-ratio" width="100%" height="100%"  src="https://www.youtube.com/embed/_0bbi8UAfks?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=1&playlist=_0bbi8UAfks&vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-
-
-                      */}
+            <section className="hero is-medium" ref={homeSection} style={{position: 'relative', height: ''}}>
+                <div className="video-container">
+                    <video playsInline autoPlay muted loop>
+                        <source src={backgroundVideo} type="video/mp4"/>
+                    </video>
+                    <div className="invisible-panel">
+                    </div>
                 </div>
-                <div className="invisible-panel">
-                </div>
+
                 <div className="hero-body bg-gradient">
                     <div className="container has-text-centered px-3">
 
