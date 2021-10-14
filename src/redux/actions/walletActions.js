@@ -37,7 +37,7 @@ export const set_connection = value => {
 }
 
 
-const OPERATING_NETWORK = 4;
+const OPERATING_NETWORK = 1;
 const set_connected_to_operating_network = value => {
     return{
         type: SET_CONNECTED_TO_OPERATING_NETWORK,
@@ -70,7 +70,7 @@ export const request_connection = () => {
 }
 
 export const request_change_network = (networkId) => {
-    return async (dispatch, getState) => {       
+    return async (dispatch, getState) => {
 
 
         try {
