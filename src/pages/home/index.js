@@ -129,7 +129,7 @@ const HomePage = props => {
                             OUR UTILITY IS OUR COMMUNITY.
                         </h1>
 
-                        <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
+                        <a href="https://discord.gg/AtUaEehXJe" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded"><strong>JOIN DISCORD</strong></a>
 
                         <br/><br/>
                         <h1 className="subtitle has-text-white mt-3">
