@@ -16,7 +16,7 @@ const footer = props => {
                         </span>
                     </a>
                     &nbsp;&nbsp;
-                    <a  href="https://discord.gg/dB7NuXBn9Z" target="_blank">
+                    <a  href="https://discord.gg/AtUaEehXJe" target="_blank">
                         <span className="icon has-text-white is-size-4">
                             <i class="fab fa-discord"></i>
                         </span>
