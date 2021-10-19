@@ -172,8 +172,7 @@ const Mint = props => {
             </form>
 
             <br/>
-            <h1 className="title has-text-white is-6 mb-3">YOU CAN MINT A MAXIMUM OF 100 MINT PASSES PER WALLET</h1>
-            <h1 className="title has-text-white is-6 mb-3">PLEASE USE YOUR COMPUTER ONLY TO MINT FROM THE WEBSITE</h1>
+            <h1 className="title has-text-white is-6 mb-3">YOU CAN MINT A MAXIMUM OF 97 MINT PASSES PER WALLET</h1>            
             <h1 className="title has-text-white is-6 mb-3">SUPPORTED WALLET: METAMASK</h1>
 
         </div>
