@@ -135,7 +135,7 @@ const Mint = props => {
                                     <h1 className="subtitle has-text-white is-6 mb-4">{webData.userMints} NFT's minted</h1>
 
                                     <h1 className="subtitle has-text-white is-6 mb-4">{webData.mintsLeft} Mints left for this wallet </h1>
-                                    <h1 className="subtitle has-text-white is-7 mb-4">{webData.leftNFT} NFT's left </h1>
+                                  {/*  <h1 className="subtitle has-text-white is-7 mb-4">{webData.leftNFT} NFT's left </h1> /*}
 
                                     <button className={`button is-cyellow has-text-black is-size-5 is-rounded  ${props.txReducer.MINT_TX.loading ? 'is-loading is-warning' : ''}`} type="submit"><strong>MINT</strong></button>
                                 </div>
