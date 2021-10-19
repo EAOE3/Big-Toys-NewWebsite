@@ -19,6 +19,12 @@ const Mint = props => {
         leftNFT: 0
     });
 
+    const [validationSchema, setValidationSchema] = useState(
+        Yup.object().shape({
+            mintQuantity: Yup.number().min(1).max(1).required('required')
+        })
+    );
+
     const {wallet} = props;
     // console.log(webData);
 
@@ -48,6 +54,12 @@ const Mint = props => {
                     ...webData,
                     mintsLeft: webData.totalAllowedMintsPerUser - webData.userMints
                 }
+                setValidationSchema(
+                    Yup.object().shape({
+                        mintQuantity: Yup.number().min(1).max(webData.mintsLeft).required('required')
+                    })
+                );
+
                 // console.log(webData);
             } catch (e) {
                 console.log('ERROR CONSULTING DATA', e);
@@ -70,9 +82,7 @@ const Mint = props => {
         }, []
     );
 
-    const validationSchema = Yup.object().shape({
-        mintQuantity: Yup.number().min(1).max(10).required('required')
-    });
+
 
 
     const formik = useFormik({
@@ -130,7 +140,7 @@ const Mint = props => {
                                     <button className={`button is-cyellow has-text-black is-size-5 is-rounded  ${props.txReducer.MINT_TX.loading ? 'is-loading is-warning' : ''}`} type="submit"><strong>MINT</strong></button>
                                 </div>
                             :
-                                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(4)}><strong>Change to ETH mainnet</strong></button>
+                                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(1)}><strong>Change to ETH mainnet</strong></button>
                         :
                             <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_connection()}><strong>Connect</strong></button>
                 }

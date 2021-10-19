@@ -147,7 +147,7 @@ const HomePage = props => {
 
 
 
-            <section className="py-6 has-background-black is-hidden" style={{position: 'relative'}}>
+            <section className="py-6 has-background-black is-hiddena" style={{position: 'relative'}}>
                 <Mint/>
             </section>
 
