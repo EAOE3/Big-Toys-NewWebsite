@@ -29,7 +29,7 @@ const Mint = props => {
     // console.log(webData);
 
 
-    const target_date = Date.parse('Oct 19 2021 14:00:00 GMT-0500');
+    const target_date = Date.parse('Oct 19 2021 13:00:00 GMT-0500');
     const current_date = Date.parse( new Date() );
 
 

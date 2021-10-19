@@ -30,10 +30,10 @@ const HomePage = props => {
 
     useEffect(
         () => {
-            const target_date = Date.parse('Oct 19 2021 14:00:00 GMT-0500');
+            const target_date = Date.parse('Oct 19 2021 13:00:00 GMT-0500');
             setInterval(() => {
                 const current_date = Date.parse( new Date() );
-                var distance = target_date - current_date;
+                var distance = 0;
 
                 // Time calculations for days, hours, minutes and seconds
               const days = Math.floor(distance / (1000 * 60 * 60 * 24));
