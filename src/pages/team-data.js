@@ -3,7 +3,8 @@ import {
     member2,
     member3,
     member4,
-    member5
+    member5,
+    member6
 } from 'images';
 
 const team = [
@@ -37,6 +38,14 @@ const team = [
         name: 'Zaini Media',
         charge: 'Animation Studio',
         link: '<a href="https://zainimedia.com"><span class="icon is-size-2 has-text-white"><i class="fal fa-globe"></i></span></a>'
+    } , {
+        imageurl: member6,
+        name: 'Doublex',
+        charge: 'Strategic Marketing Advisor',
+        link: '<a href="https://www.instagram.com/doublex/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-instagram"></i></span></a>',
+        info: "When you are raised by New York, you are bestowed a certain grit—the sort that is nurtured by everyday dealings with strangers and subway rides. Born in Queens, star entrepreneur Xerxes Frechiani has that city-hardened spirit and ambition; he is only 28 and has built one of the fastest growing full-service media agencies, Double X Entertainment. </br></br>" +
+            "Frechiani began working for the likes of Flo Rida, his first client, within months of graduating from Florida International University with a degree in International Business and Management, and it didn't take long until other big-name brands and musicians started to notice his marketing prowess. Since its founding in 2013, Double X Entertainment has worked with retail  giants like Macy's, Reebok and Colgate, as well as celebrities like Pharrell Williams, Travis Scott and LeBron James. </br></br>" +
+            "By targeting a domestic and international markets with savvy digital marketing strategies, Xerxes now receives 5 million impressions per month across his social media platforms. With more than 12 years of real-life business experience to boast, Xerxes has grown to be a globally recognized public figure and a total marketing badass. </br></br>"
     }
 ];
 

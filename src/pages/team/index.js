@@ -43,7 +43,7 @@ const Team = props => {
                                                 </div>
                                                 <p className="has-text-white">
                                                     {
-                                                        t.info
+                                                        <ReactHtml html={t.info}/>
                                                     }
                                                 </p>
                                             </div>
