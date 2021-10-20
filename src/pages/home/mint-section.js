@@ -148,7 +148,7 @@ const Mint = props => {
 
                 <br/>
                 <br/>
-                {/*
+                
                     (target_date - current_date > 0) ?
                     // false ?
                         null
@@ -168,8 +168,8 @@ const Mint = props => {
                                 </div>
                             </div>
                         </div>
-                    </div>*/
-                }
+                    </div>
+                
             </form>
 
             <br/>
