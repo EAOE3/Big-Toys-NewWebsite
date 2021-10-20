@@ -110,7 +110,7 @@ const Mint = props => {
         <div className="container has-text-centered px-3">
 
 
-        {/*
+        {
 
             <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                 <div style={{width: '120px'}}>
@@ -143,11 +143,11 @@ const Mint = props => {
                                 <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(1)}><strong>Change to ETH mainnet</strong></button>
                         :
                             <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_connection()}><strong>Connect</strong></button>
-               */}
+               }
 
    <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> 
 
-       {/*
+       {
                 <br/>
                 <br/>
                 
@@ -171,7 +171,7 @@ const Mint = props => {
                             </div>
                         </div>
                     </div>
-                */}
+               }
             </form>
 
             <br/>
