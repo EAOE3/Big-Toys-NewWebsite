@@ -121,7 +121,7 @@ const Mint = props => {
             </div>
             <br/>
             <form onSubmit={formik.handleSubmit}>
-                {/*
+                
                     (target_date - current_date > 0) ?
                     // false ?
                         <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 19</strong></button>
@@ -143,8 +143,8 @@ const Mint = props => {
                                 <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_change_network(1)}><strong>Change to ETH mainnet</strong></button>
                         :
                             <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_connection()}><strong>Connect</strong></button>
-                */}
-                <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button>
+               
+{/* <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> */}
 
                 <br/>
                 <br/>
