@@ -147,6 +147,7 @@ const Mint = props => {
 
    <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> 
 
+       {/*
                 <br/>
                 <br/>
                 
@@ -154,7 +155,7 @@ const Mint = props => {
                     // false ?
                         null
                     :
-                {/*
+                
                     <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                         <div style={{width: '300px'}}>
                             <div class="field">
