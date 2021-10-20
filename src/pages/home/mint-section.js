@@ -144,7 +144,8 @@ const Mint = props => {
                         :
                             <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" onClick={e => props.request_connection()}><strong>Connect</strong></button>
                */}
-{/* <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> */}
+
+   <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> 
 
                 <br/>
                 <br/>
