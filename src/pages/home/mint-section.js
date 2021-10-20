@@ -110,7 +110,7 @@ const Mint = props => {
         <div className="container has-text-centered px-3">
 
 
-       
+
 
             <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                 <div style={{width: '120px'}}>
@@ -121,7 +121,7 @@ const Mint = props => {
             </div>
             <br/>
             <form onSubmit={formik.handleSubmit}>
-                
+
                  {    (target_date - current_date > 0) ?
                     // false ?
                         <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>MINT ON OCT 19</strong></button>
@@ -147,15 +147,15 @@ const Mint = props => {
 
   {/* <button className="button is-cyellow has-text-black is-size-5 is-rounded" type="button" disabled><strong>PRESALE SOLD OUT</strong></button> */}
 
-       {
+
                 <br/>
                 <br/>
-                
-                    (target_date - current_date > 0) ?
+
+            {        (target_date - current_date > 0) ?
                     // false ?
                         null
                     :
-                
+
                     <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
                         <div style={{width: '300px'}}>
                             <div class="field">
