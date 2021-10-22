@@ -1,6 +1,77 @@
+@import '~bulma/sass/utilities/mixins';
+
 .carousel-section{
     width: 100%;
     background: dodgerblue;
     display: inline-flex;
     height: 250px;
+}
+
+.carousel-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+}
+
+.img_{
+    transition: 0.25s;
+    transform: scale(0.9);
+}
+
+.img_.current{
+    transform: scale(1.1);
+}
+
+.carousel-card {
+
+    flex: 0 0 400px;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        flex: 0 0 200px;
+    }
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.carousel-pagination-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.carousel-pagination {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 360px;
+    padding: 0;
+}
+
+.carousel-pagination li {
+    width: 8px;
+    height: 2px;
+    background: rgba(50, 50, 50, 0.5);
+}
+
+.carousel-pagination .current {
+    background: white;
 }

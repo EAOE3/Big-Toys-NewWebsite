@@ -11,43 +11,44 @@
  *   <NonPassiveTouchTarget onTouchMove={fnYourListener} />
  * </NonPassiveTouchTarget>
  */
-import React from "react";
+import React from 'react'
 
-const OPTIONS = { passive: false };
+const OPTIONS = { passive: false }
 
 class NonPassiveTouchTarget extends React.Component {
-  componentDidMount() {
-    this.node.addEventListener("touchmove", this.props.onTouchMove, OPTIONS);
+  componentDidMount () {
+    this.node.addEventListener('touchmove', this.props.onTouchMove, OPTIONS)
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps) {
     if (prevProps.onTouchMove !== this.props.onTouchMove) {
-      this.node.removeEventListener(
-        "touchmove",
-        prevProps.onTouchMove,
-        OPTIONS
-      );
-      this.node.addEventListener("touchmove", this.props.onTouchMove, OPTIONS);
+      this.node.removeEventListener('touchmove', prevProps.onTouchMove, OPTIONS)
+      this.node.addEventListener('touchmove', this.props.onTouchMove, OPTIONS)
     }
   }
 
-  componentWillUnmount() {
-    this.node.removeEventListener("touchmove", this.props.onTouchMove, OPTIONS);
+  componentWillUnmount () {
+    this.node.removeEventListener('touchmove', this.props.onTouchMove, OPTIONS)
   }
 
-  ref = node => {
-    this.node = node;
-  };
+  ref = (node) => {
+    this.node = node
+  }
 
-  render() {
-    const { component: Component, onTouchMove, ...rest } = this.props;
-    return <Component ref={this.ref} {...rest} />;
+  render () {
+    const { component: Component, onTouchMove, ...rest } = this.props
+    return (
+      <Component
+        ref={this.ref}
+        {...rest}
+      />
+    )
   }
 }
 
 NonPassiveTouchTarget.defaultProps = {
-  component: "div",
-  onTouchMove() {}
-};
+  component: 'div',
+  onTouchMove () {}
+}
 
-export default NonPassiveTouchTarget;
+export default NonPassiveTouchTarget
