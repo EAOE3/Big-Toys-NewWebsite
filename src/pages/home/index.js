@@ -5,6 +5,7 @@ import {set_section} from 'redux/actions/navbarActions';
 
 
 import Mint from './mint-section';
+import Carousel from './carousel-section';
 
 import roadmapData from './roadmap-data';
 import teamData from '../team-data';
@@ -149,6 +150,10 @@ const HomePage = props => {
 
             <section className="py-6 has-background-black is-hiddena" style={{position: 'relative'}}>
                 <Mint/>
+            </section>
+
+            <section className="py-6 has-background-black" style={{position: 'relative'}}>
+                <Carousel/>
             </section>
 
             <section className="py-6 has-background-dark">
