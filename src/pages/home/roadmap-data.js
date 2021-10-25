@@ -2,11 +2,11 @@ const data = [
     {
         title: "MINT PASSES",
         body: "<div class='has-text-white is-size-5'><del>MINT PASSES WILL BE GIVEN AWAY BETWEEN <span class='has-text-cyellow'>OCT-12 & OCT-19</span></del></br>" +
-            "MINT PASSES WILL BE AVAILABLE UNTIL <span class='has-text-cyellow'>OCT-26</span></br>"
+            "MINT PASSES SALE IS NOW OPEN!</br>"
             // "<small class='is-size-6'>*BATCHES OF 1500 MINT PASSES WILL BE RELEASED EVERY DAY BETWEEN <span class='has-text-cyellow'>OCT-10 & OCT-16<span><small></div>"
     }, {
         title: "BIG TOYS NFTs",
-        body: "<div class='has-text-white is-size-5'>MINT PASS HOLDERS WILL BE ABLE TO MINT THEIR BIG TOYS NFTs ON <span class='has-text-cyellow'>OCT-26</span> </br>" +
+        body: "<div class='has-text-white is-size-5'>MINT PASS HOLDERS WILL BE ABLE TO MINT THEIR BIG TOYS NFTs AFTER THE MINT PASS SALE PERIOD</br>" +
             "<small class='is-size-6'>ONLY BIG TOY NFT HOLDERS WILL HAVE ACCESS TO THE LIST OF GIVEAWAYS</div>"
     }, {
         title: "GIVEAWAYS",
