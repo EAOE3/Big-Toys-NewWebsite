@@ -20,7 +20,7 @@ const Team = props => {
                         {
                             teamData.map( (t, i) => {
 
-                                if(i == 5) return null;
+                                if(i === 2 || i === 3 || i === 5) return null;
 
                                 return(
                                     <li className=" mb-6" key={i}>

@@ -217,25 +217,33 @@ const HomePage = props => {
 
                 <div className="columns px-3">
                     {
-                        teamData.map( (t, i) =>
-                            <div className="column has-text-centered" key={i}>
-                                <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                                    <div style={{width: '180px'}}>
-                                        <figure className='image is-square'>
-                                            <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)'}}/>
-                                        </figure>
+                        teamData.map( (t, i) => {
+
+                            if(i === 2 || i === 3 || i === 5){
+                                return;
+                            }
+
+                            return(
+                                <div className="column has-text-centered" key={i}>
+                                    <div className="has-text-centered" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
+                                        <div style={{width: '180px'}}>
+                                            <figure className='image is-square'>
+                                                <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)'}}/>
+                                            </figure>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <br/>
+                                    <br/>
 
-                                <div className="" style={{height:"100px"}}>
-                                    <h1 className="title has-text-white is-5 has-text-centered">{t.name}</h1>
-                                    <h1 className="subtitle has-text-white is-6 has-text-centered">{t.charge}</h1>
+                                    <div className="" style={{height:"100px"}}>
+                                        <h1 className="title has-text-white is-5 has-text-centered">{t.name}</h1>
+                                        <h1 className="subtitle has-text-white is-6 has-text-centered">{t.charge}</h1>
+                                    </div>
+                                    <h1 className="subtitle has-text-white is-5 has-text-centered"><ReactHtml html={t.link}/></h1>
                                 </div>
-                                <h1 className="subtitle has-text-white is-5 has-text-centered"><ReactHtml html={t.link}/></h1>
-                            </div>
-                        )
+                            );
+                            
+                        })
                     }
                 </div>
 
