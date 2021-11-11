@@ -39,9 +39,9 @@ function App() {
                         <Team/>
                     </Route>
 
-                    <Route exact path="/media">
+               {/*<Route exact path="/media">
                         <Media/>
-                    </Route>
+                    </Route> */}
                 </Switch>
 
             <Footer/>
