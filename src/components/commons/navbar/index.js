@@ -81,9 +81,9 @@ const Navbar = props => {
                         Team
                     </Link>
 
-                    <Link className="has-text-white navbar-item has-text-centered-mobile" to="/media">
+                   {/* <Link className="has-text-white navbar-item has-text-centered-mobile" to="/media">
                         Media
-                    </Link>
+                    </Link> */}
 
 
                 </div>
